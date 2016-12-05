@@ -32,7 +32,7 @@ export default class RegisterForm extends Component {
                 </div>
                 <div className="form-group">
                     <label>
-                        Re-enter password:
+                        Confirm password:
                     </label>
                     <input
                         type="password"
