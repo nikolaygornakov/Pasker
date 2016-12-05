@@ -43,7 +43,7 @@ class App extends Component {
                 <div className="container">
                     <Header>
                         <nav className="navbar navbar-inverse ">
-                            <a href="#" className="navbar-brand"> <img className ="logo-data" alt="Brand" height="80" src={Logo} width="80"/></a>
+                            <a href="#" className="navbar-brand"> <img className="logo-data" alt="Brand" height="80" src={Logo} width="80"/></a>
                             <ul className="nav navbar-nav right-data">
                                 <li><Link to="/">Home</Link></li>
                                 <li><Link to="/projects">Projects</Link></li>
@@ -59,7 +59,7 @@ class App extends Component {
                 <div className="container">
                     <Header>
                         <nav className="navbar navbar-inverse ">
-                            <a href="#" className="navbar-brand"> <img className ="logo-data" alt="Brand" height="80" src={Logo} width="80"/></a>
+                            <a href="#" className="navbar-brand"> <img className="logo-data" alt="Brand" height="80" src={Logo} width="80"/></a>
                             <ul className="nav navbar-nav right-data">
                                 <li> <Link to="/">Home</Link> </li>
                                 <li><Link to="/login">Login</Link></li>
