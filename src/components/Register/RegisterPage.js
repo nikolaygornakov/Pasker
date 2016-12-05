@@ -56,7 +56,7 @@ class Register extends Component {
         }
         return (
             <div className='content-mid'>
-                <h1>Register New User</h1>
+                <h1>Sign Up</h1>
                 <RegisterForm
                     username={this.state.username}
                     password={this.state.password}

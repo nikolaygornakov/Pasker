@@ -47,7 +47,7 @@ export default class Login extends Component {
         }
         return (
             <div className='content-mid'>
-                <h1>Login Page</h1>
+                <h1>Login</h1>
                 <LoginForm
                     username={this.state.username}
                     password={this.state.password}
