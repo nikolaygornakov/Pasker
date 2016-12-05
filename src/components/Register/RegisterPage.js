@@ -55,7 +55,7 @@ class Register extends Component {
             this.context.router.push("/");
         }
         return (
-            <div>
+            <div className='content-mid'>
                 <h1>Register New User</h1>
                 <RegisterForm
                     username={this.state.username}

@@ -4,7 +4,7 @@ export default class RegisterForm extends Component {
     render() {
         return (
             <form onSubmit={this.props.onSubmit}>
-                <div className="form-group">
+                <div className="form-group data-group">
                     <label>
                         Username:
                     </label>
@@ -17,7 +17,7 @@ export default class RegisterForm extends Component {
                         disabled={this.props.inputDisabled}
                     />
                 </div>
-                <div className="form-group">
+                <div className="form-group data-group">
                     <label>
                         Password:
                     </label>
@@ -30,7 +30,7 @@ export default class RegisterForm extends Component {
                         disabled={this.props.inputDisabled}
                     />
                 </div>
-                <div className="form-group">
+                <div className="form-group data-group">
                     <label>
                         Confirm password:
                     </label>
