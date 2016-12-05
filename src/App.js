@@ -61,7 +61,7 @@ class App extends Component {
                         <nav className="navbar navbar-inverse ">
                             <a href="#" className="navbar-brand"> <img className="logo-data" alt="Brand" height="80" src={Logo} width="80"/></a>
                             <ul className="nav navbar-nav right-data">
-                                <li> <Link to="/">Home</Link> </li>
+                                <li><Link to="/">Home</Link></li>
                                 <li><Link to="/login">Login</Link></li>
                                 <li><Link to="/register">Register</Link></li>
                             </ul>
