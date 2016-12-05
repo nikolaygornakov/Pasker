@@ -44,3 +44,12 @@ body {
 .right-data {
   float: right !important
 }
+.content-mid {
+  text-align: center;
+  
+}
+
+.data-group{
+  max-width: 50%;
+  margin-left: 25%;
+}

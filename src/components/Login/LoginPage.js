@@ -46,7 +46,7 @@ export default class Login extends Component {
             this.context.router.push("/");
         }
         return (
-            <div>
+            <div className='content-mid'>
                 <h1>Login Page</h1>
                 <LoginForm
                     username={this.state.username}

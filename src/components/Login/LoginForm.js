@@ -4,7 +4,7 @@ class LoginForm extends Component {
     render() {
         return (
             <form onSubmit={this.props.onSubmit}>
-                <div className="form-group">
+                <div className="form-group data-group">
                     <label>
                         Username:
                     </label>
@@ -17,7 +17,7 @@ class LoginForm extends Component {
                         disabled={this.props.inputDisabled}
                     />
                 </div>
-                <div className="form-group">
+                <div className="form-group data-group">
                     <label>
                         Password:
                     </label>
@@ -39,6 +39,7 @@ class LoginForm extends Component {
                     disabled={this.props.inputDisabled}
                 />
             </form>
+            
         );
     }
 }
