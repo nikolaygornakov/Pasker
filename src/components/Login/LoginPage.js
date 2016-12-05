@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import LoginForm from './LoginForm';
+import {login} from '../../models/user';
 
 export default class Login extends Component {
     constructor(props) {
@@ -32,13 +33,18 @@ export default class Login extends Component {
         this.setState({
             inputDisabled: true
         });
+
+        login(this.state.username, this.state.password, this.onLoginSuccess);
     }
 
     onLoginSuccess(result){
-        this.setState({
-            inputDisabled: false
-        });
-        this.context.router.push("/");
+        if (result === true) {
+            this.context.router.push("/");
+        } else {
+            this.state({
+                inputDisabled: true
+            });
+        }
     }
 
     render() {
