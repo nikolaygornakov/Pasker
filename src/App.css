@@ -23,7 +23,7 @@
   to { transform: rotate(360deg); }
 }
 body {
-    
+    font-family: oswald !important;
     width: 100%;
     background: url(../public/wp.jpg);
     background-repeat: no-repeat;
