@@ -1,3 +1,3 @@
 # SoftUni-JS-Apps-TeamProject
 Single Page Application with React
-WHAT?
+Pasker: Project Task Manager!
