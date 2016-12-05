@@ -64,6 +64,7 @@ class App extends Component {
                                 <li><Link to="/">Home</Link></li>
                                 <li><Link to="/login">Login</Link></li>
                                 <li><Link to="/register">Register</Link></li>
+                                <li><Link to="/create">Create</Link></li>
                             </ul>
                         </nav>
                     </Header>

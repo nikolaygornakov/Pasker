@@ -7,6 +7,7 @@ import Project from './components/Project/Project';
 import Login from './components/Login/LoginPage';
 import Register from './components/Register/RegisterPage';
 import Logout from './components/Logout/Logout';
+import Create from './components/Create/CreatePage'
 
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import './index.css';
@@ -23,6 +24,7 @@ ReactDOM.render(
             <Route path="/login" component={Login}></Route>
             <Route path="/register" component={Register}></Route>
             <Route path="/logout" component={Logout}></Route>
+            <Route path="/create" component={Create}></Route>
         </Route>
     </Router>,
     document.getElementById('root')
