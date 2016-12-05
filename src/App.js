@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import {Link } from 'react-router';
 import Logo from '../public/logo.png'
 import Header from './components/Shared/Header';
+import observer from './models/observer';
 
 import './App.css';
 
@@ -13,27 +14,25 @@ class App extends Component {
             username: ''
         };
         this.onSessionUpdate = this.onSessionUpdate.bind(this);
+        observer.onSessionUpdate = this.onSessionUpdate.bind(this);
     }
 
     componentDidMount() {
-        this.checkUserCredentials();
+        this.onSessionUpdate();
     }
 
     onSessionUpdate() {
-        this.checkUserCredentials();
-    }
-
-    checkUserCredentials() {
-        let username = sessionStorage.getItem('username');
-        if (!username) {
-            this.setState({
-                loggedIn: false
-            })
-        } else {
+        let name = sessionStorage.getItem("username");
+        if (name) {
             this.setState({
                 loggedIn: true,
-                username: username
-            })
+                username: sessionStorage.getItem("username")
+            });
+        } else {
+            this.setState({
+                loggedIn: false,
+                username: ''
+            });
         }
     }
 
