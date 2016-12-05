@@ -12,7 +12,6 @@ class App extends Component {
                 <Header>
                     <Link to="/" className="btn btn-default">Home</Link>
                     <Link to="/projects" className="btn btn-default">Projects</Link>
-                    <Link to="/about" className="btn btn-default">About</Link>
                     <Link to="/login" className="btn btn-default">Login</Link>
                     <Link to="/register" className="btn btn-default">Register</Link>
                     <Link to="/logout" className="btn btn-default">Logout</Link>
