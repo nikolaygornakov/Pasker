@@ -26,7 +26,8 @@ export default class ProjectPage extends Component {
             <div>
                 <h1>Projects Page</h1>
                 {this.state.projects.map((p, i) => {
-                    return <Project key={i} projectname={p.projectname} description={p.description}/>
+                   
+                    return <Project key={i} projectname={p.projectname} description={p.descritpion}/>
                 })}
 
             </div>
