@@ -12,4 +12,11 @@ function create(name, description, callback) {
             });
 }
 
-export {create};
+function edit() {
+    
+}
+
+export {
+    create,
+    edit
+};
