@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import RegisterForm from './RegisterForm';
+import {register} from '../../models/user';
 
 class Register extends Component {
     constructor(props) {
@@ -30,17 +31,14 @@ class Register extends Component {
 
     onSubmitHandler(event) {
         event.preventDefault();
-        this.setState({
-            inputDisabled: true
-        });
 
-        if (this.state.username !== this.state.password) {
-            this.setState({
-                inputDisabled: true
-            });
-        } else {
+        if (this.state.password !== this.state.confirmPassword) {
+            alert("Password don't match");
+            return;
         }
 
+        this.context.router.push('/');
+        register(this.state.username, this.state.password, this.onSubmitHandler);
     }
 
     onRegisterSuccess(result){

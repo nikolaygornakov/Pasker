@@ -40,8 +40,8 @@ function register(username, password, callback) {
         .then(registerSuccess);
 
     function registerSuccess(userInfo) {
-        observer.showSuccess('Successful registration.');
         saveSession(userInfo);
+        observer.onSessionUpdate();
         callback(true);
     }
 }
