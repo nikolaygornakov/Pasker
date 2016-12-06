@@ -56,3 +56,6 @@ export default class CreatePage extends Component {
         )
     }
 }
+CreatePage.contextTypes = {
+    router: React.PropTypes.object
+}
