@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 
 import App from './App';
 import Home from './components/Home/HomePage';
-import Project from './components/Project/Project';
+import ProjectPage from './components/Project/ProjectPage';
 import Login from './components/Login/LoginPage';
 import Register from './components/Register/RegisterPage';
 import Logout from './components/Logout/Logout';
@@ -20,7 +20,7 @@ ReactDOM.render(
     <Router history={browserHistory}>
         <Route path="/" component={App}>
             <IndexRoute component={Home}/>
-            <Route path="/projects" component={Project}></Route>
+            <Route path="/projects" component={ProjectPage}></Route>
             <Route path="/login" component={Login}></Route>
             <Route path="/register" component={Register}></Route>
             <Route path="/logout" component={Logout}></Route>

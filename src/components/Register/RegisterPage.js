@@ -31,7 +31,6 @@ class Register extends Component {
 
     onSubmitHandler(event) {
         event.preventDefault();
-
         if (this.state.password !== this.state.confirmPassword) {
             alert("Password don't match");
             return;

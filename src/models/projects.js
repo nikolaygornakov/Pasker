@@ -1,5 +1,10 @@
 import * as requester from './requester';
 
+function loadProjects(callback) {
+    requester.get('appdata', 'projects', 'kinvey')
+        .then(callback);
+}
+
 function create(name, description, callback) {
     let projectData = {
         "projectname": name,
@@ -17,6 +22,7 @@ function edit() {
 }
 
 export {
+    loadProjects,
     create,
     edit
 };
