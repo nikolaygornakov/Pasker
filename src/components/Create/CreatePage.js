@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import CreateForm from './CreateForm'
+import {create} from '../../models/projects';
 
 export default class CreatePage extends Component {
      constructor(props) {
@@ -28,8 +29,9 @@ export default class CreatePage extends Component {
 
     onSubmitHandler(event) {
         event.preventDefault();
-     //   this.setState({submitDisabled: true});
-      //  create(this.state.name, this.state.description, this.onSubmitResponse);
+     this.setState({submitDisabled: true});
+      create(this.state.name, this.state.description, this.onSubmitResponse)
+      console.log(this.state.projectname, this.state.description, this.onSubmitResponse);
     }
      
     render() {
