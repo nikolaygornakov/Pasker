@@ -23,18 +23,13 @@ export default class ProjectPage extends Component {
 
     render() {
         return (
-            <div>
-                <h1>Projects Page</h1>
+            <div >
+                <h1 className='content-mid'>Projects Page</h1>
                 {this.state.projects.map((p, i) => {
                    
                     return (
-                        <div key={i}>
                         <Project key={i} id={p._id} projectname={p.projectname} description={p.description}/>
-                        <input
-                            type="submit"
-                            value="Add task"
-                        />
-                        </div>
+
                     )
                 })}
 
