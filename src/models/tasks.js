@@ -30,26 +30,27 @@ function edit(taskid, p_id, date, location, callback) {
 
 
 
-function loadTasks(p_id, callback) {
+function loadProject(p_id, callback) {
     // Request teams from db
-    get('appdata', `tasks/?query={"p_id": "${p_id}"}`, 'kinvey')
+    requester.get('appdata', `projects/${p_id}`, 'kinvey')
         .then(callback);
 }
 
-function loadTaskInfo(t_id, onTaskSuccess) {
-    get('appdata', 'tasks/' + t_id, 'kinvey')
-        .then(onTeamSuccess);
+function loadTasks(p_id, callback) {
+    // Request teams from db
+    requester.get('appdata', `tasks/?query={"p_id": "${p_id}"}`, 'kinvey')
+        .then(callback);
 }
 
 function loadTaskPriority(t_id, onPrioritySuccess) {
-    get('user', `?query={"t_id": "${t_id}"}`, 'kinvey')
-        .then(onUsersSuccess);
+    requester.get('user', `?query={"t_id": "${t_id}"}`, 'kinvey')
+        .then(onPrioritySuccess);
 }
 
 export {
     create,
     edit,
+    loadProject,
     loadTasks,
-    loadTaskInfo,
     loadTaskPriority
 };
