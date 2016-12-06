@@ -48,7 +48,7 @@ function register(username, password, callback) {
 
 // User logout
 function logout(callback) {
-    requester.post('user', '_logout', null, 'kinvey')
+    requester.post('user', '_logout', 'kinvey', null)
         .then(logoutSuccess);
 
 
