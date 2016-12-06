@@ -29,7 +29,7 @@ export default class ProjectPage extends Component {
                    
                     return (
                         <div key={i}>
-                        <Project key={i} projectname={p.projectname} description={p.description}/>
+                        <Project key={i} id={p._id} projectname={p.projectname} description={p.description}/>
                         <input
                             type="submit"
                             value="Add task"
