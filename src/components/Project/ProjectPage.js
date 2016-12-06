@@ -14,7 +14,9 @@ export default class ProjectPage extends Component {
     }
 
     componentDidMount() {
-        loadProjects(this.onLoadSuccess);
+        if (sessionStorage.getItem('username')) {
+            loadProjects(this.onLoadSuccess);
+        }
     }
 
     onLoadSuccess(response) {
@@ -22,11 +24,14 @@ export default class ProjectPage extends Component {
     }
 
     render() {
+        if (!sessionStorage.getItem('username')) {
+            this.context.router.push("/");
+        }
         return (
             <div >
                 <h1 className='content-mid'>Projects Page</h1>
                 {this.state.projects.map((p, i) => {
-                   
+
                     return (
                         <Project key={i} id={p._id} projectname={p.projectname} description={p.description}/>
 
@@ -37,3 +42,7 @@ export default class ProjectPage extends Component {
         )
     }
 }
+
+ProjectPage.contextTypes = {
+    router: React.PropTypes.object
+};

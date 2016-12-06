@@ -8,7 +8,9 @@ export default class Logout extends Component {
     }
 
     logout() {
-        logout(this.onSubmitResponse.bind(this));
+        if (sessionStorage.getItem('username')) {
+            logout(this.onSubmitResponse.bind(this));
+        }
     }
 
     onSubmitResponse(response) {
@@ -19,9 +21,7 @@ export default class Logout extends Component {
     }
 
     render() {
-        if (sessionStorage.getItem('username')) {
-            this.context.router.push("/");
-        }
+        this.context.router.push("/");
         return null
     }
 }
