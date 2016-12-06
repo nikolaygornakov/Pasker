@@ -8,6 +8,7 @@ import Login from './components/Login/LoginPage';
 import Register from './components/Register/RegisterPage';
 import Logout from './components/Logout/Logout';
 import Create from './components/Create/CreatePage'
+import ProjectTasks from './components/Tasks/ProjectTasksPage'
 
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import './index.css';
@@ -20,7 +21,10 @@ ReactDOM.render(
     <Router history={browserHistory}>
         <Route path="/" component={App}>
             <IndexRoute component={Home}/>
-            <Route path="/projects" component={ProjectPage}></Route>
+            <Route path="/projects">
+            <IndexRoute component={ProjectPage}/>
+                <Route path=":p_id" component={ProjectTasks}/>
+            </Route>
             <Route path="/login" component={Login}></Route>
             <Route path="/register" component={Register}></Route>
             <Route path="/logout" component={Logout}></Route>
