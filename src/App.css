@@ -61,3 +61,20 @@ body {
 h1 {
   color: #48d5f3!important
 }
+
+.panel {
+  background-color: rgba(75, 14, 5, 0.21) !important;
+  padding: 15px;
+  margin-right: 10px
+}
+.panel-body  {
+  color: rgb(217, 217, 217) !important;
+}
+
+.panel-info>.panel-heading{
+  background-color: rgba(28, 28, 28, 0.56) !important;
+  color: rgba(123, 237, 255, 0.91) !important;
+  margin-top: 7px;
+  border-color:#905353
+
+}
