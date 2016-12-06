@@ -17,7 +17,7 @@ export default class CreatePage extends Component {
         // Make sure event handlers have the correct context
         this.onChangeHandler = this.onChangeHandler.bind(this);
         this.onSubmitHandler = this.onSubmitHandler.bind(this);
-       // this.onSubmitResponse = this.onSubmitResponse.bind(this);
+        this.onSubmitResponse = this.onSubmitResponse.bind(this);
     }
 
     onChangeHandler(event) {
@@ -33,7 +33,15 @@ export default class CreatePage extends Component {
          create(this.state.projectname, this.state.description, this.onSubmitResponse)
       console.log(this.state.projectname, this.state.description, this.onSubmitResponse);
     }
-     
+     onSubmitResponse(response) {
+        if (response === true) {
+            // Navigate away from login page
+            this.context.router.push('/');
+        } else {
+            // Something went wrong, let the user try again
+            this.setState({submitDisabled: true});
+        }
+    }
     render() {
         return ( <div className='content-mid'>
             <h1>Create Project</h1>
