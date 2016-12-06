@@ -33,8 +33,8 @@ class CreateForm extends Component {
 
                 <input
                     type="submit"
-                    name="btnLogin"
-                    value="Login"
+                    name="btnCreate"
+                    value="Create"
                     className="btn btn-default"
                     disabled={this.props.inputDisabled}
                 />
