@@ -93,3 +93,12 @@ h1 {
   color: #222222;
     font-size: 1.1em;
 }
+
+.form-control {
+  color: white !important;
+  background-color:rgba(255, 255, 255, 0.1) !important;
+}
+.btn-default {
+  color: white !important;
+  background-color:rgba(255, 255, 255, 0.1) !important;
+}
