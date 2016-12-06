@@ -23,8 +23,7 @@ function post(module, collection, auth, data) {
         method: "POST",
         url: hostUrl,
         headers: headerData,
-        contentType: 'application/json',
-        data: JSON.stringify(data)
+        data: data
     });
 }
 
