@@ -27,7 +27,15 @@ export default class ProjectPage extends Component {
                 <h1>Projects Page</h1>
                 {this.state.projects.map((p, i) => {
                    
-                    return <Project key={i} projectname={p.projectname} description={p.description}/>
+                    return (
+                        <div key={i}>
+                        <Project key={i} projectname={p.projectname} description={p.description}/>
+                        <input
+                            type="submit"
+                            value="Add task"
+                        />
+                        </div>
+                    )
                 })}
 
             </div>
