@@ -45,6 +45,7 @@ class App extends Component {
                             <a href="#" className="navbar-brand"> <img className="logo-data" alt="Brand" height="80" src={Logo} width="80"/></a>
                             <ul className="nav navbar-nav right-data">
                                 <li><Link to="/">Home</Link></li>
+                                <li><Link to="/create">Create</Link></li>
                                 <li><Link to="/projects">Projects</Link></li>
                                 <li><Link to="/logout">Logout</Link></li>
                             </ul>
@@ -63,7 +64,6 @@ class App extends Component {
                                 <li><Link to="/">Home</Link></li>
                                 <li><Link to="/login">Login</Link></li>
                                 <li><Link to="/register">Register</Link></li>
-                                <li><Link to="/create">Create</Link></li>
                             </ul>
                         </nav>
                     </Header>
