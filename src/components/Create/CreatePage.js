@@ -29,8 +29,8 @@ export default class CreatePage extends Component {
 
     onSubmitHandler(event) {
         event.preventDefault();
-     this.setState({submitDisabled: true});
-      create(this.state.name, this.state.description, this.onSubmitResponse)
+        this.setState({submitDisabled: true});
+         create(this.state.projectname, this.state.description, this.onSubmitResponse)
       console.log(this.state.projectname, this.state.description, this.onSubmitResponse);
     }
      

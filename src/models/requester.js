@@ -18,7 +18,7 @@ function get(module, collection, auth) {
 function post(module, collection, auth, data) {
     let hostUrl = baseUrl + module + "/" + appId + "/" + collection;
     let headerData = getAuthData(auth);
-
+console.log(data)
     return $.ajax({
         method: "POST",
         url: hostUrl,
