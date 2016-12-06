@@ -8,7 +8,7 @@ function loadProjects(callback) {
 function create(name, description, callback) {
     let projectData = {
         "projectname": name,
-        "descritpion": description
+        "description": description
     };
 
     requester.post('appdata', 'projects', 'kinvey', projectData)
