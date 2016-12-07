@@ -44,7 +44,7 @@ export default class ProjectTasks extends Component {
                     <th>Actions</th>
                 </tr></thead>
                 <tbody>
-                    {this.props.tasks.sort((a, b) => a.date - b.date).map((p, i) => {
+                    {this.props.tasks.map((p, i) => {
                     return (
                         <tr key={i}>
                         <td>{i+1}</td>

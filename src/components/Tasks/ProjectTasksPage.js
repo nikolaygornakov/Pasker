@@ -89,7 +89,8 @@ export default class ProjectView extends Component {
         if (this.state.projectname !== '') {
             title = this.state.projectname;
         }
-         this.state.tasks = [...this.state.tasks].sort((a, b) => a['date'] > b['date'])
+
+        this.state.tasks = [...this.state.tasks].sort((a, b) => a['date'] > b['date']);
 
         return (
             <ProjectTasks newtask={this.state.newtask}
