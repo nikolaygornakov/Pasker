@@ -30,7 +30,7 @@ export default class ProjectPage extends Component {
         }
         return (
             <div >
-                <h1 className='content-mid'>Projects Page</h1>
+                <h1 className='content-mid'>P R O J E C T S</h1>
                 {this.state.projects.map((p, i) => {
 
                     return (
