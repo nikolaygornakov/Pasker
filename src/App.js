@@ -3,6 +3,7 @@ import {Link } from 'react-router';
 import Logo from '../public/logo.png'
 import Header from './components/Shared/Header';
 import observer from './models/observer';
+import Notifications from './components/Shared/Notifications';
 
 import './App.css';
 
@@ -52,6 +53,7 @@ class App extends Component {
                         </nav>
                     </Header>
                     {this.props.children}
+
                 </div>
             );
         } else {
@@ -68,6 +70,7 @@ class App extends Component {
                         </nav>
                     </Header>
                     {this.props.children}
+                    <Notifications/>
                 </div>
             );
         }

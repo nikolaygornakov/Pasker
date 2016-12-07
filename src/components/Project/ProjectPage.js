@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import Project from './Project';
 import { loadProjects } from '../../models/projects';
+//import observer from '../../models/observer';
 
 export default class ProjectPage extends Component {
     constructor(props){

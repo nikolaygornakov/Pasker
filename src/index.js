@@ -22,13 +22,13 @@ ReactDOM.render(
         <Route path="/" component={App}>
             <IndexRoute component={Home}/>
             <Route path="/projects">
-            <IndexRoute component={ProjectPage}/>
+                <IndexRoute component={ProjectPage}/>
                 <Route path=":p_id" component={ProjectTasks}/>
             </Route>
-            <Route path="/login" component={Login}></Route>
-            <Route path="/register" component={Register}></Route>
-            <Route path="/logout" component={Logout}></Route>
-            <Route path="/create" component={Create}></Route>
+            <Route path="/login" component={Login}/>
+            <Route path="/register" component={Register}/>
+            <Route path="/logout" component={Logout}/>
+            <Route path="/create" component={Create}/>
         </Route>
     </Router>,
     document.getElementById('root')
