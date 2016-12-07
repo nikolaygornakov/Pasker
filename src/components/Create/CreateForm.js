@@ -15,6 +15,7 @@ class CreateForm extends Component {
                         onChange={this.props.onChange}
                         className="form-control"
                         disabled={this.props.inputDisabled}
+                        required="required"
                     />
                 </div>
                 <div className="form-group data-group">
@@ -28,6 +29,7 @@ class CreateForm extends Component {
                         onChange={this.props.onChange}
                         className="form-control"
                         disabled={this.props.inputDisabled}
+                        required="required"
                     ></textarea>
                 </div>
 
