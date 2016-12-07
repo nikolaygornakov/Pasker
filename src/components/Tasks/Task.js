@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import NewTask from '../Tasks/NewTask'
 
 export default class ProjectTasks extends Component {
     render() {
@@ -7,7 +8,7 @@ export default class ProjectTasks extends Component {
             <div className="panel panel-info">
                 <div className="panel-heading"><h3 className="panel-title">{this.props.projectname}</h3> </div>
                 <div>Description: {this.props.description}</div>
-                <h2>Project's task table</h2>
+                <row><h2 className='data-h2'>Project's task table</h2><NewTask/></row>
                 <table className="table table-condensed">
                 <thead> <tr>
                 <th>#</th>

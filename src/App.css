@@ -102,3 +102,11 @@ h1 {
   color: white !important;
   background-color:rgba(255, 255, 255, 0.1) !important;
 }
+
+.form-inline{
+  float: right !important;
+  margin-top: 20px;
+}
+.data-h2 {
+  float: left;
+}
