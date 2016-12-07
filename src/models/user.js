@@ -26,6 +26,7 @@ function login(username, password, callback) {
     function loginSuccess(userInfo) {
         saveSession(userInfo);
         callback(true);
+        observer.showSuccess('Login successful.');
     }
 }
 
@@ -43,6 +44,7 @@ function register(username, password, callback) {
         saveSession(userInfo);
         observer.onSessionUpdate();
         callback(true);
+        observer.showSuccess('Register successful.');
     }
 }
 
@@ -56,6 +58,7 @@ function logout(callback) {
         sessionStorage.clear();
         observer.onSessionUpdate();
         callback(true);
+        observer.showSuccess('Logout successful.');
     }
 }
 
