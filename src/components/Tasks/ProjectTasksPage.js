@@ -90,7 +90,14 @@ export default class ProjectView extends Component {
             title = this.state.projectname;
         }
         return (
-            <ProjectTasks newtask={this.state.newtask} onChangeHandler={this.onChangeHandler} onSubmitHandler={this.onSubmitHandler} newlocation={this.state.newlocation} newdate={this.state.newdate} tasks={this.state.tasks} p_id={this.props.params.p_id} projectname={title} description={this.state.description}>             
+            <ProjectTasks newtask={this.state.newtask}
+                          onChangeHandler={this.onChangeHandler}
+                          onSubmitHandler={this.onSubmitHandler}
+                          newlocation={this.state.newlocation}
+                          newdate={this.state.newdate}
+                          tasks={this.state.tasks}
+                          p_id={this.props.params.p_id}
+                          projectname={title} description={this.state.description}>
             </ProjectTasks>
         )
     }

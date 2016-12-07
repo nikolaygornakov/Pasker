@@ -46,7 +46,7 @@ class NewTask extends Component {
                     value="Create"
                     className="btn btn-default"
                     disabled={this.props.inputDisabled}
-                    onSubmitHandler={this.props.onSubmitHandler}
+                    onSubmit={this.props.onSubmitHandler}
                 />
             </form>
             
