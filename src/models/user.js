@@ -20,12 +20,18 @@ function login(username, password, callback) {
     };
 
     requester.post('user', 'login', 'basic', userData)
-        .then(loginSuccess);
+        .then(loginSuccess)
+        .catch(err);
 
     function loginSuccess(userInfo) {
         saveSession(userInfo);
         callback(true);
         observer.showSuccess('Login successful.');
+    }
+
+    function err(data) {
+        callback(false);
+        observer.showError('Invalid user data!');
     }
 }
 

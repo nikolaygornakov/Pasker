@@ -40,6 +40,9 @@ export default class Login extends Component {
     onLoginSuccess(result){
         if (result === true) {
             this.context.router.push("/");
+        } else {
+            this.context.router.push("/");
+            this.context.router.push("/login");
         }
     }
 
