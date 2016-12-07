@@ -71,9 +71,9 @@ export default class ProjectView extends Component {
     onSubmitHandler(event) {
         event.preventDefault();
         this.setState({submitDisabled: true});
-        
-    create(this.props.params.p_id, this.state.newtask, this.state.newdate, this.state.newlocation, this.onSubmitResponse);
-      //console.log(this.state.projectname, this.state.description, this.onSubmitResponse);
+
+        create(this.props.params.p_id, this.state.newtask, this.state.newdate, this.state.newlocation, this.onSubmitResponse);
+        //console.log(this.state.projectname, this.state.description, this.onSubmitResponse);
     }
      onSubmitResponse(response) {
         if (response === true) {

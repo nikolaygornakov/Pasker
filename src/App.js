@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import {Link } from 'react-router';
 import Logo from '../public/logo.png'
 import Header from './components/Shared/Header';
+import Footer from './components/Shared/Footer';
 import observer from './models/observer';
 import Notifications from './components/Shared/Notifications';
 
@@ -56,6 +57,7 @@ class App extends Component {
                         <Notifications/>
                     </Header>
                     {this.props.children}
+                    <Footer/>
                 </div>
             );
         } else {
@@ -73,6 +75,7 @@ class App extends Component {
                         <Notifications/>
                     </Header>
                     {this.props.children}
+                    <Footer/>
                 </div>
             );
         }

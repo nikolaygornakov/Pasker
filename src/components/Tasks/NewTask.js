@@ -14,7 +14,7 @@ class NewTask extends Component {
                         value={this.props.newtask}
                         onChange={this.props.onChangeHandler}
                         className="form-control"
-                        
+                        required="required"
                     />
                 </div>
                  <div className="form-group">
@@ -25,7 +25,7 @@ class NewTask extends Component {
                         value={this.props.newdate}
                         onChange={this.props.onChangeHandler}
                         className="form-control"
-                        
+                        required="required"
                     />
                 </div>
                  <div className="form-group">
@@ -36,7 +36,7 @@ class NewTask extends Component {
                         value={this.props.newlocation}
                         onChange={this.props.onChangeHandler}
                         className="form-control"
-                        
+                        required="required"
                     />
                 </div>
 
