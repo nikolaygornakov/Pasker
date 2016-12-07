@@ -17,6 +17,7 @@ export default class ProjectTasks extends Component {
     onDeleteSuccess(result) {
         if (result === true) {
             this.context.router.push("/projects");
+            this.context.router.push(`/projects/${this.props.p_id}`);
         }
     }
 
