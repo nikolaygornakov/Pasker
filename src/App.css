@@ -97,6 +97,8 @@ h1 {
 .form-control {
   color: white !important;
   background-color:rgba(255, 255, 255, 0.1) !important;
+  border: 0px solid #ccc !important;
+  margin-left: 5px;
 }
 .btn-default {
   color: white !important;
@@ -105,8 +107,12 @@ h1 {
 
 .form-inline{
   float: right !important;
-  margin-top: 20px;
+  margin-top: 15px;
 }
 .data-h2 {
   float: left;
+}
+
+.form-inline .form-group {
+padding: 5px
 }
