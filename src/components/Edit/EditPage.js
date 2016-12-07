@@ -32,27 +32,27 @@ export default class ProjectView extends Component {
         this.onSubmitResponse = this.onSubmitResponse.bind(this);
     }
 
-   
+
 
     statusChange(response) {
         this.context.router.push('/');
     }
 
     componentDidMount() {
-   
-       loadProject(this.props.params.p_id, this.onLoadSuccess);
-       loadTasks(this.props.params.p_id, this.onUsersSuccess);
+
+        loadProject(this.props.params.p_id, this.onLoadSuccess);
+        loadTasks(this.props.params.p_id, this.onUsersSuccess);
     }
 
     onLoadSuccess(response) {
-        
+
         let newState = {
             projectname: response.projectname,
             description: response.description
-        };
+        }
 
         this.setState(newState);
-       
+
     }
 
     onUsersSuccess(response) {
@@ -61,7 +61,7 @@ export default class ProjectView extends Component {
         });
     }
 
-     onChangeHandler(event) {
+    onChangeHandler(event) {
         event.preventDefault();
         let newState = {};
         newState[event.target.name] = event.target.value;
@@ -75,9 +75,9 @@ export default class ProjectView extends Component {
         create(this.props.params.p_id, this.state.newtask, this.state.newdate, this.state.newlocation, this.onSubmitResponse);
         //console.log(this.state.projectname, this.state.description, this.onSubmitResponse);
     }
-     onSubmitResponse(response) {
+    onSubmitResponse(response) {
         if (response === true) {
-         loadTasks(this.props.params.p_id, this.onUsersSuccess);
+            loadTasks(this.props.params.p_id, this.onUsersSuccess);
         } else {
             // Something went wrong, let the user try again
             this.setState({submitDisabled: true});

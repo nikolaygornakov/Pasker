@@ -27,6 +27,19 @@ function post(module, collection, auth, data) {
     });
 }
 
+function remove(module, taskId, auth) {
+    let hostUrl = baseUrl + module + "/" + appId + "/" + taskId;
+    let headerData = getAuthData(auth);
+
+    let request = {
+        method: "DELETE",
+        url: hostUrl,
+        headers: headerData
+    };
+
+    return $.ajax(request);
+}
+
 function getAuthData(auth) {
     let header = { "Authorization" : ''};
 
@@ -45,5 +58,6 @@ function getAuthData(auth) {
 
 export {
     get,
-    post
+    post,
+    remove
 }

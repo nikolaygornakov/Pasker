@@ -29,7 +29,9 @@ function edit(taskid, p_id, date, location, callback) {
             });
 }
 
-
+function deleteTask(taskId) {
+    requester.remove('appdata', 'tasks/' + taskId, 'kinvey')
+}
 
 function loadProject(p_id, callback) {
     // Request teams from db
@@ -51,6 +53,7 @@ function loadTaskPriority(t_id, onPrioritySuccess) {
 export {
     create,
     edit,
+    deleteTask,
     loadProject,
     loadTasks,
     loadTaskPriority

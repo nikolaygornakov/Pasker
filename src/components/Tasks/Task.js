@@ -1,7 +1,13 @@
 import React, {Component} from 'react';
-import NewTask from '../Tasks/NewTask'
+import NewTask from '../Tasks/NewTask';
+import TaskControls from './TaskControls';
+import {deleteTask} from '../../models/tasks';
 
 export default class ProjectTasks extends Component {
+    onDelete(id) {
+        deleteTask(id);
+    }
+
     render() {
         return (
            
@@ -18,22 +24,24 @@ export default class ProjectTasks extends Component {
                              tasks={this.props.tasks}/></row>
                 <table className="table table-condensed">
                 <thead><tr>
-                <th>#</th>
-                <th>Task</th>
-                <th>Date</th>
-                <th>Location</th>
+                    <th>#</th>
+                    <th>Task</th>
+                    <th>Date</th>
+                    <th>Location</th>
+                    <th>Actions</th>
                 </tr></thead>
                 <tbody>
                     {this.props.tasks.map((p, i) => {
-
                     return (
                         <tr key={i}>
                         <td>{i+1}</td>
                         <td>{p.task}</td>
                         <td>{p.date}</td>
                         <td>{p.location}</td>
+                        <td>
+                            <TaskControls author={p._acl.creator} taskId={p._id} onDelete={this.onDelete}/>
+                        </td>
                         </tr>
-
                     )
                 })}
                 </tbody>
