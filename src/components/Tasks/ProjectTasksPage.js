@@ -57,7 +57,6 @@ export default class ProjectView extends Component {
         if (this.state.projectname !== '') {
             title = this.state.projectname;
         }
-        console.dir(this.state.tasks)
         return (
             <ProjectTasks tasks={this.state.tasks} id={this.props.params.p_id} projectname={title} description={this.state.description}>             
             </ProjectTasks>

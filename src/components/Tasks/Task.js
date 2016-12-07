@@ -6,16 +6,17 @@ export default class ProjectTasks extends Component {
         return (
            
             <div className="panel panel-info">
-                <div className="panel-heading"><h3 className="panel-title">{this.props.projectname}</h3> </div>
+                <div className="panel-heading"><h3 className="panel-title">{this.props.projectname}</h3></div>
                 <div>Description: {this.props.description}</div>
-                <row><h2 className='data-h2'>Project's task table</h2><NewTask/></row>
+                <row><h2 className='data-h2'>Project's tasks</h2><NewTask/></row>
                 <table className="table table-condensed">
-                <thead> <tr>
+                <thead><tr>
                 <th>#</th>
                 <th>Task</th>
                 <th>Date</th>
                 <th>Location</th>
                 </tr></thead>
+                <tbody>
                     {this.props.tasks.map((p, i) => {
 
                     return (
@@ -28,6 +29,7 @@ export default class ProjectTasks extends Component {
 
                     )
                 })}
+                </tbody>
                 </table>
             </div>
             
