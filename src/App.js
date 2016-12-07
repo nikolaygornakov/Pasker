@@ -6,6 +6,7 @@ import observer from './models/observer';
 import Notifications from './components/Shared/Notifications';
 
 import './App.css';
+import './components/Shared/layout.css';
 
 class App extends Component {
     constructor(props) {
@@ -48,6 +49,7 @@ class App extends Component {
                                 <li><Link to="/">Home</Link></li>
                                 <li><Link to="/create">Create</Link></li>
                                 <li><Link to="/projects">Projects</Link></li>
+                                <li className="greeting">Hello, <span className="username">{this.state.username}</span>!</li>
                                 <li><Link to="/logout">Logout</Link></li>
                             </ul>
                         </nav>
