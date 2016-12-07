@@ -44,6 +44,7 @@ class App extends Component {
       return (
         <div>
           <div className='container'>
+           <Notifications/>
             <Header>
               <nav className='navbar navbar-inverse '>
                 <a href='#' className='navbar-brand'><img
@@ -74,7 +75,7 @@ class App extends Component {
                   </li>
                 </ul>
               </nav>
-              <Notifications/>
+             
             </Header>
             {this.props.children}
           </div>
@@ -85,6 +86,7 @@ class App extends Component {
       return (
         <div>
           <div className='container'>
+             <Notifications/>
             <Header>
               <nav className='navbar navbar-inverse '>
                 <a href='#' className='navbar-brand'><img
@@ -108,7 +110,7 @@ class App extends Component {
                   </li>
                 </ul>
               </nav>
-              <Notifications/>
+           
             </Header>
             {this.props.children}
           </div>
