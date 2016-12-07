@@ -2,15 +2,17 @@ import React, { Component } from 'react';
 
 class NewTask extends Component {
     render() {
+     
         return (
-            <form className="form-inline" onSubmit={this.props.onSubmit}>
+            
+            <form className="form-inline" onSubmit={this.props.onSubmitHandler}>
                 <div className="form-group">
                       <input
                         type="text"
-                        name="task"
+                        name="newtask"
                         placeholder="New Task"
-                        value={this.props.task}
-                        onChange={this.props.onChange}
+                        value={this.props.newtask}
+                        onChange={this.props.onChangeHandler}
                         className="form-control"
                         
                     />
@@ -18,10 +20,10 @@ class NewTask extends Component {
                  <div className="form-group">
                       <input
                         type="Date"
-                        name="date"
+                        name="newdate"
                         placeholder="Date"
-                        value={this.props.date}
-                        onChange={this.props.onChange}
+                        value={this.props.newdate}
+                        onChange={this.props.onChangeHandler}
                         className="form-control"
                         
                     />
@@ -29,10 +31,10 @@ class NewTask extends Component {
                  <div className="form-group">
                       <input
                         type="text"
-                        name="location"
+                        name="newlocation"
                         placeholder="Location"
-                        value={this.props.location}
-                        onChange={this.props.onChange}
+                        value={this.props.newlocation}
+                        onChange={this.props.onChangeHandler}
                         className="form-control"
                         
                     />
@@ -44,6 +46,7 @@ class NewTask extends Component {
                     value="Create"
                     className="btn btn-default"
                     disabled={this.props.inputDisabled}
+                    onSubmitHandler={this.props.onSubmitHandler}
                 />
             </form>
             

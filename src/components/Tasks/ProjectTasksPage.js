@@ -1,6 +1,8 @@
 import React, {Component} from 'react';
 import {loadProject, loadTasks} from '../../models/tasks';
 import ProjectTasks from '../Tasks/Task'
+import {create} from '../../models/tasks'
+
 
 export default class ProjectView extends Component {
     constructor(props) {
@@ -10,6 +12,10 @@ export default class ProjectView extends Component {
             description: '',
             tasks: [],
             taskid: '',
+            newtask:'',
+            newdate:'',
+            newlocation:"",
+            p_id: this.props.params.p_id,
             ownTeam: sessionStorage.getItem('teamId') === this.props.params.teamId
         };
 
@@ -20,6 +26,10 @@ export default class ProjectView extends Component {
         this.onLoadSuccess = this.onLoadSuccess.bind(this);
         this.onUsersSuccess = this.onUsersSuccess.bind(this);
         this.statusChange = this.statusChange.bind(this);
+
+        this.onChangeHandler = this.onChangeHandler.bind(this);
+        this.onSubmitHandler = this.onSubmitHandler.bind(this);
+        this.onSubmitResponse = this.onSubmitResponse.bind(this);
     }
 
    
@@ -51,14 +61,36 @@ export default class ProjectView extends Component {
         });
     }
 
-    render() {
+     onChangeHandler(event) {
+        event.preventDefault();
+        let newState = {};
+        newState[event.target.name] = event.target.value;
+        this.setState(newState);
+    }
+//begin For New Task
+    onSubmitHandler(event) {
+        event.preventDefault();
+        this.setState({submitDisabled: true});
         
+    create(this.props.params.p_id, this.state.newtask, this.state.newdate, this.state.newlocation, this.onSubmitResponse);
+      //console.log(this.state.projectname, this.state.description, this.onSubmitResponse);
+    }
+     onSubmitResponse(response) {
+        if (response === true) {
+         loadTasks(this.props.params.p_id, this.onUsersSuccess);
+        } else {
+            // Something went wrong, let the user try again
+            this.setState({submitDisabled: true});
+        }
+    }
+    // end For New Task
+    render() {
         let title = 'Project tasks info';
         if (this.state.projectname !== '') {
             title = this.state.projectname;
         }
         return (
-            <ProjectTasks tasks={this.state.tasks} id={this.props.params.p_id} projectname={title} description={this.state.description}>             
+            <ProjectTasks newtask={this.state.newtask} onChangeHandler={this.onChangeHandler} onSubmitHandler={this.onSubmitHandler} newlocation={this.state.newlocation} newdate={this.state.newdate} tasks={this.state.tasks} p_id={this.props.params.p_id} projectname={title} description={this.state.description}>             
             </ProjectTasks>
         )
     }
