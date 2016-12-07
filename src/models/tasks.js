@@ -29,8 +29,11 @@ function edit(taskid, p_id, date, location, callback) {
             });
 }
 
-function deleteTask(taskId) {
+function deleteTask(taskId, callback) {
     requester.remove('appdata', 'tasks/' + taskId, 'kinvey')
+        .then((response) => {
+            callback(true)
+        });
 }
 
 function loadProject(p_id, callback) {

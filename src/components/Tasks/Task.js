@@ -4,8 +4,20 @@ import TaskControls from './TaskControls';
 import {deleteTask} from '../../models/tasks';
 
 export default class ProjectTasks extends Component {
+    constructor(props) {
+        super(props);
+        this.onDeleteSuccess=this.onDeleteSuccess.bind(this);
+        this.onDelete=this.onDelete.bind(this);
+    }
+
     onDelete(id) {
-        deleteTask(id);
+        deleteTask(id, this.onDeleteSuccess);
+    }
+
+    onDeleteSuccess(result) {
+        if (result === true) {
+            this.context.router.push("/projects");
+        }
     }
 
     render() {
@@ -39,7 +51,9 @@ export default class ProjectTasks extends Component {
                         <td>{p.date}</td>
                         <td>{p.location}</td>
                         <td>
-                            <TaskControls author={p._acl.creator} taskId={p._id} onDelete={this.onDelete}/>
+                            <TaskControls author={p._acl.creator}
+                                          taskId={p._id}
+                                          onDelete={this.onDelete}/>
                         </td>
                         </tr>
                     )
@@ -51,3 +65,7 @@ export default class ProjectTasks extends Component {
         )
     }
 }
+
+ProjectTasks.contextTypes = {
+    router: React.PropTypes.object
+};
