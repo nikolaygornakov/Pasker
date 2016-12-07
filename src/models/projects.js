@@ -1,4 +1,5 @@
 import * as requester from './requester';
+import observer from '../models/observer';
 
 function loadProjects(callback) {
     requester.get('appdata', 'projects', 'kinvey')
@@ -13,8 +14,10 @@ function create(name, description, callback) {
 
     requester.post('appdata', 'projects', 'kinvey', projectData)
         .then((response) => {
-            callback(true)
+            callback(true);
+            observer.showSuccess('Project successfully created!');
             });
+
 }
 
 function edit() {
