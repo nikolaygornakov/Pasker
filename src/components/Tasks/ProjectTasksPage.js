@@ -1,7 +1,8 @@
 import React, {Component} from 'react';
 import {loadProject, loadTasks} from '../../models/tasks';
+import ProjectTasks from '../Tasks/Task'
 
-export default class ProjectTasks extends Component {
+export default class ProjectView extends Component {
     constructor(props) {
         super(props);
         this.state ={
@@ -54,36 +55,16 @@ export default class ProjectTasks extends Component {
         
         let title = 'Project tasks info';
         if (this.state.projectname !== '') {
-            title = this.state.projectname + ' details';
+            title = this.state.projectname;
         }
-        
-        let tasks = <p>No member info</p>;
-        if (this.state.tasks.length > 0) {
-            tasks = (
-            <div>
-                {this.state.tasks.map((e, i) => 
-                    <div>
-                    <span>{e.task}</span>
-                    <span>{e.location}</span>
-                    <span>{e.date}</span>
-                    </div>
-                )}
-            </div>
-            );
-        }
-
+        console.dir(this.state.tasks)
         return (
-            <div className="details-box">
-                <span className="titlebar">{title}</span>
-                <span className="spanner">Team tasks</span>
-                {tasks}
-                <span className="spanner">location</span>
-               
-            </div>
+            <ProjectTasks tasks={this.state.tasks} id={this.props.params.p_id} projectname={title} description={this.state.description}>             
+            </ProjectTasks>
         )
     }
 }
 
-ProjectTasks.contextTypes = {
+ProjectView.contextTypes = {
     router: React.PropTypes.object
 };
