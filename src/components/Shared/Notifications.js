@@ -47,7 +47,7 @@ export default class Notifications extends Component {
         this.setState({ visible: false });
     }
 
-    handleAjaxError(event, response) {
+    handleAjaxError(response) {
         let errorMsg = JSON.stringify(response);
         if (response.readyState === 0)
             errorMsg = "Cannot connect due to network error.";

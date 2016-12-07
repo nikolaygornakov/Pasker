@@ -16,7 +16,7 @@ class App extends Component {
             username: ''
         };
         this.onSessionUpdate = this.onSessionUpdate.bind(this);
-        observer.onSessionUpdate = this.onSessionUpdate.bind(this);
+        observer.onSessionUpdate = this.onSessionUpdate;
     }
 
     componentDidMount() {
@@ -53,9 +53,9 @@ class App extends Component {
                                 <li><Link to="/logout">Logout</Link></li>
                             </ul>
                         </nav>
+                        <Notifications/>
                     </Header>
                     {this.props.children}
-
                 </div>
             );
         } else {
@@ -70,9 +70,9 @@ class App extends Component {
                                 <li><Link to="/register">Register</Link></li>
                             </ul>
                         </nav>
+                        <Notifications/>
                     </Header>
                     {this.props.children}
-                    <Notifications/>
                 </div>
             );
         }

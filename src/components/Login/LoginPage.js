@@ -40,10 +40,6 @@ export default class Login extends Component {
     onLoginSuccess(result){
         if (result === true) {
             this.context.router.push("/");
-        } else {
-            this.state({
-                inputDisabled: true
-            });
         }
     }
 
@@ -51,6 +47,7 @@ export default class Login extends Component {
         if (sessionStorage.getItem('username')) {
             this.context.router.push("/");
         }
+
         return (
             <div className='content-mid'>
                 <h1>Login</h1>

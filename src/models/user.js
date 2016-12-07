@@ -1,7 +1,6 @@
 import * as requester from './requester';
 import observer from './observer';
 
-
 function saveSession(userInfo) {
     let userAuth = userInfo._kmd.authtoken;
     sessionStorage.setItem('authToken', userAuth);
