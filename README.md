@@ -1,4 +1,4 @@
-# Pasker
+# Pasker - project task manager
 Teamwork Project for **JS Core** module in Software University ["SoftUni"](https://softuni.bg)
 
 Sample ReactJS SPA with MVC architecture.
@@ -10,35 +10,27 @@ Sample ReactJS SPA with MVC architecture.
     - NodeJS 
 
 ###Functionality:
+    -User Registration
     -Login / Logout
     -CRUD 
     -Notification system
     -User control
-    
+
 ## Installation
 
-TODO: Describe the installation process
+1.Clone the project
+2.Install dependencies `npm install`
+3.Run application : `npm start`
+App run on **localhost:3000** by default.
 
 ## Usage
 
-TODO: Write usage instructions
-
-## Contributing
-
-1. Fork it!
-2. Create your feature branch: `git checkout -b my-new-feature`
-3. Commit your changes: `git commit -am 'Add some feature'`
-4. Push to the branch: `git push origin my-new-feature`
-5. Submit a pull request :D
-
-## History
-
-TODO: Write history
+Create user accoutn and go on :)
 
 ## Credits
 
-TODO: Write credits
+[Tanyo Georgiev](https://github.com/tanyogeorgiev) | [Nikolay Gornakov](https://github.com/Gornakoff)
 
 ## License
 
-TODO: Write license
+MIT
