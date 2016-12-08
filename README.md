@@ -18,9 +18,9 @@ Sample ReactJS SPA with MVC architecture.
 
 ## Installation
 
-1.Clone the project
-2.Install dependencies `npm install`
-3.Run application : `npm start`
+1. Clone the project
+2. Install dependencies `npm install`
+3. Run application : `npm start`
 App run on **localhost:3000** by default.
 
 ## Usage
