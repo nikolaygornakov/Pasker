@@ -1,8 +1,8 @@
 import $ from 'jquery';
 
 const baseUrl = "https://baas.kinvey.com/";
-const appId = "kid_HybBLfXme";
-const appSecret = "08687a3bfb3d4909943827381ed77558";
+const appId = "kid_BJK2fGBbF";
+const appSecret = "72fb2de302a14ff5b2e986679deab34e";
 
 function get(module, collection, auth) {
     let hostUrl = baseUrl + module + "/" + appId + "/" + collection;
